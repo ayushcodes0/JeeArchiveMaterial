@@ -1,0 +1,339 @@
+
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Roboto", sans-serif;
+
+}
+
+h1,h2,h3,h4{
+    font-weight: 450;
+    letter-spacing: -.0625rem;
+}
+
+:root{
+    --gray-3: hsla(140, 6%, 20%, 1);
+    --menu-content-color: #a60832;
+    --body-bg-color: #ededed;
+    --body-bg-color-dark: #1a1c1a;
+    --content-color: black;
+    --content-color-dark: #f7f7f7;
+    --menu-content-color-dark: #B0B5B2;
+}
+
+
+/* Dark/Light Mode Toggle */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 8px 8px 0;
+    background-color: var(--body-bg-color-dark);
+    color: var(--content-color-dark);
+    border: 1px solid var(--menu-content-color-dark);
+    border-left: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+    background-color: var(--gray-3);
+}
+
+.theme-toggle i {
+    font-size: 20px;
+    transition: all 0.3s ease;
+}
+
+/* Hide the inactive icon */
+.theme-toggle .fa-moon { display: none; }
+body.light-mode .theme-toggle .fa-sun { display: none; }
+body.light-mode .theme-toggle .fa-moon { display: block; }
+
+/* Light mode styles */
+body.light-mode {
+    background-color: var(--body-bg-color);
+    color: var(--content-color);
+}
+
+body.light-mode .menu ul{
+    color: var(--menu-content-color);
+}
+
+body.light-mode .menu ul li:hover{
+    color: #ec1b53 ;
+}
+
+body.light-mode .left ul,
+body.light-mode .top-link,
+body.light-mode .dates p {
+    color: #686b6a;
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+body.light-mode .left ul li:hover,
+body.light-mode .top-link:hover{
+    color: black;
+}
+
+body.light-mode .theme-toggle {
+    background-color: var(--body-bg-color);
+    color: var(--content-color);
+    border: 1px solid var(--menu-content-color);
+}
+
+
+
+
+body{
+    padding: 80px 200px;
+    /* background-color: var(--body-bg-color); */
+    /* color: var(--content-color); */
+    background-color: var(--body-bg-color-dark);
+    color: var(--content-color-dark);
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 14px;
+    /* color: var(--menu-content-color); */
+    color: var(--menu-content-color-dark);
+}
+
+.menu ul li:hover{
+    color: hsla(140, 6%, 94%, 1);
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+main{
+    padding-top: 60px;
+}
+
+.main-div{
+    /* padding-top: 60px; */
+    display: flex;
+    align-items: start;
+    gap: 160px;
+}
+
+main .left ul{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: var(--menu-content-color-dark);
+    font-size: 14px;
+}
+
+main .left ul li:hover{
+    color: hsla(140, 6%, 94%, 1);
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+main .right{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-right: 180px;
+}
+
+.right h1{
+    font-size: 48px;
+    font-weight: 450;
+}
+
+.right .top-link{
+    text-decoration: underline;
+    color: var(--menu-content-color-dark);
+    font-size: 14px;
+}
+
+.right .top-link:hover{
+    color: hsla(140, 6%, 94%, 1);
+    cursor: pointer;
+    transition: all ease .3s;
+}
+
+.right .info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right .info p{
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.main-links{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    border-bottom: 1px solid var(--gray-3);
+    padding-bottom: 24px;
+}
+
+.right h2{
+    font-size: 30px;
+    font-weight: 450;
+}
+
+.links-content{
+    display: flex;
+    justify-content: space-between;
+}
+
+.links-content h3{
+    font-weight: 450;
+}
+
+.links-info{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-right: 30px;
+    width: 80%;
+}
+
+.links-info h3{
+    font-size: 18px;
+    text-decoration: underline;
+}
+.links-info h3:hover{
+    cursor: pointer;
+}
+
+.links-info p{
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.dates p{
+    font-size: 12px;
+    color: var(--menu-content-color-dark);
+}
+
+
+.bottom-box{
+    background-color: hsla(140, 6%, 15%, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    margin-top: 150px;
+    border-radius: .5rem;
+}
+
+.box-left{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-right: 120px;
+    /* background-color: red; */
+}
+
+.box-left h2{
+    font-size: 30px;
+}
+
+.box-left p{
+    font-size: 16.8px;
+    line-height: 1.6;
+}
+
+.box-right{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0px 20px 20px;
+}
+
+.box-right .box-right-first, .box-right .box-right-sec{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+
+.box-right p{
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: "VT323", sans-serif;
+
+}
+
+.box-right button{
+    padding: 4px 10.8px;
+    border: none;
+    border-radius: 0.3rem;
+}
+
+.box-right-first button{
+    background-color: #B2A3FF;
+    color: #181b19;
+}
+
+.box-right-sec button{
+    background-color: #eff1ef;
+    color: #181b19;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 140px;
+}
+
+.footer-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 40%;
+    padding-right: 140px;
+}
+
+.footer-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    column-gap: 60px;
+}
+
+.footer-grid div{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-grid div h4{
+    font-size: 14.8;
+    color: #89908b;
+    font-weight: 500;
+}
+.footer-grid div p{
+    font-size: 14px;
+}
