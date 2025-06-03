@@ -459,4 +459,42 @@ body.light-mode .mobile-menu{
 }
 
 
+@media (max-width: 921px){
+    .bottom-box{
+        flex-direction: column;
+        gap: 18px;
+        align-items: start;
+
+    }
+    .box-right{
+        padding: 0;
+    }
+    .box-left{
+        padding: 0;
+    }
+}
+
+@media (max-width: 789px){
+    
+    .box-right{
+        padding: 0;
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+    }
+    .bottom-box{
+        padding: 20px;
+    }
+}
+
+@media (max-width: 709px){
+    .footer{
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+
+
+
   
