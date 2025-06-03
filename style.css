@@ -492,6 +492,9 @@ body.light-mode .mobile-menu{
         flex-direction: column;
         gap: 40px;
     }
+    .footer-left .rights{
+        width: 100px;
+    }
 }
 
 
