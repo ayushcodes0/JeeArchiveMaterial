@@ -322,6 +322,7 @@ main .right{
     justify-content: space-between;
     align-items: start;
     margin-top: 140px;
+    margin-bottom: 140px;
 }
 
 .footer-left{
