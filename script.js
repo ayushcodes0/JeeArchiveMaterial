@@ -11,3 +11,22 @@ document.addEventListener('DOMContentLoaded', function() {
         localStorage.setItem('theme', isLight ? 'light' : 'dark');
     });
 });
+
+
+const fa_bars = document.getElementById('fa-bars');
+const fa_close = document.getElementById('fa-close');
+const mobile_menu = document.getElementById('mobile-menu');
+
+let toggle_menu = false;
+
+fa_bars.addEventListener("click", function(){
+    mobile_menu.style.display = "block";
+    fa_bars.style.display = "none";
+    fa_close.style.display = "block";
+})
+
+fa_close.addEventListener("click", function(){
+    mobile_menu.style.display = "none";
+    fa_bars.style.display = "block";
+    fa_close.style.display = "none";
+})

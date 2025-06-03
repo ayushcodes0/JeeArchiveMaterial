@@ -97,24 +97,30 @@ body.light-mode .theme-toggle {
 
 
 body.light-mode .bottom-box{
-    background-color: #BBBFCA;
+    background-color: #e0e0e0;
 }
 
 
 
 
 body{
-    padding: 80px 200px;
+    padding-top: 80px;
     /* background-color: var(--body-bg-color); */
     /* color: var(--content-color); */
     background-color: var(--body-bg-color-dark);
     color: var(--content-color-dark);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
 
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1025px;
 }
 
 .menu ul{
@@ -123,7 +129,6 @@ nav{
     align-items: center;
     gap: 30px;
     font-size: 14px;
-    /* color: var(--menu-content-color); */
     color: var(--menu-content-color-dark);
 }
 
@@ -135,6 +140,8 @@ nav{
 
 main{
     padding-top: 60px;
+    width: 1025px;
+    position: relative;
 }
 
 .main-div{
@@ -142,6 +149,7 @@ main{
     display: flex;
     align-items: start;
     gap: 160px;
+    
 }
 
 main .left ul{
@@ -349,6 +357,105 @@ main .right{
 }
 .footer-grid div p{
     font-size: 14px;
+}
+
+
+@media (max-width: 1084px) {
+    nav, main {
+        width: 100%;
+        max-width: 100%;
+        padding: 0 60px;
+    }
+
+    main{
+        padding-top: 60px;
+    }
+
+    .main-div {
+        flex-direction: column;
+        gap: 80px;
+    }
+
+    body {
+        padding: 80px 0;
+    }
+
+    main .right {
+        padding-right: 0;
+        width: 100%;
+    }
+}
+
+
+nav i.fa-bars {
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+
+
+@media (max-width: 560px) {
+    main{
+        padding: 20px;
+    }
+    nav{
+        padding: 0 20px;
+    }
+
+    nav .menu ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        right: 20px;
+        background-color: var(--body-bg-color-dark);
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        z-index: 100;
+    }
+
+    body.light-mode nav .menu ul {
+        background-color: var(--body-bg-color);
+    }
+
+    nav i.fa-bars {
+        display: block;
+    }
+    .theme-toggle{
+        width: 30px;
+        height: 30px;
+    }
+
+    .theme-toggle i{
+        font-size: .8rem;
+    }
+}
+
+nav i.fa-close{
+    font-size: 1.2rem;
+    display: none;
+}
+
+.mobile-menu{
+    background-color: rgb(33, 33, 33);
+    padding: 20px;
+    position: absolute;
+    top: 150px;
+    right: 20px;
+    border-radius: 8px;
+    display: none;
+}
+
+.mobile-menu ul{
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+body.light-mode .mobile-menu{
+    background-color: #e0e0e0;
 }
 
 
