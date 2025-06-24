@@ -55,16 +55,13 @@
             </div>
             <div class="right">
                 <h2>Can't Find a Book? Request It Here</h2>
-                <form action="https://formsubmit.co/contactjeearchive@gmail.com" method="POST" class="request-form">
+                <form action="https://formspree.io/f/xovwkgwo" method="POST" class="request-form">
                     <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Book/Module/Material Name" rows="4"></textarea>
-
-                    <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://jeearchive.vercel.app/thankyou.html">
-
+                    <textarea name="message" placeholder="Book/Module/Material Name" rows="4" required></textarea>
+                    <input type="hidden" name="_redirect" value="https://jeearchive.vercel.app/thankyou.html">
                     <button type="submit">Request</button>
                 </form>
+
             </div>
         </div>
         <div class="bottom-box">
