@@ -1,0 +1,45 @@
+:root{
+    --gray-3: hsla(140, 6%, 20%, 1);
+    --menu-content-color: #a60832;
+    --body-bg-color: #ededed;
+    --body-bg-color-dark: #1a1c1a;
+    --content-color: black;
+    --content-color-dark: #f7f7f7;
+    --menu-content-color-dark: #B0B5B2;
+}
+
+.request-form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-width: 38rem;
+    max-width: 38rem;
+}
+
+.request-form input, .request-form textarea, .request-form button{
+    padding: 12px 18px;
+    border-radius: 4px;
+    outline : none;
+    border: none;
+    background-color: hsla(140, 6%, 15%, 1);
+    color: var(--content-color-dark);
+    resize: none;
+}
+
+.request-form button{
+    font-weight: bold;
+    letter-spacing: .8px;
+}
+
+.request-form button:hover{
+    cursor: pointer;
+    border: 1px solid var(--menu-content-color-dark);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .request-form{
+        min-width: 100%;
+        max-width: 100%;
+    }
+}
