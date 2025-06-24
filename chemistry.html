@@ -186,6 +186,17 @@
             </div>
         </div>
     </main>
+    <div id="supportPopup" class="popup-overlay">
+      <div class="popup-content">
+        <span class="close-btn" id="closePopup">&times;</span>
+        <h2>Support Us via UPI</h2>
+        <p>Scan this QR or use the UPI ID below:</p>
+        <img src="assets/Ayush-QR.jpg" alt="UPI QR Code" class="qr-image" />
+        <p class="upi-id"><strong></strong></p>
+        <button onclick="copyUPI()" class="copy-btn">Copy UPI ID</button>
+        <p id="copyMsg" class="copy-msg"></p>
+      </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
