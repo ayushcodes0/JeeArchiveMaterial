@@ -32,11 +32,16 @@ fa_close.addEventListener("click", function(){
 })
 
 
-fetch('https://api.countapi.xyz/update/jee-archive.com/visitor/?amount=1')
-    .then(res => res.json())
+  fetch('https://api.countapi.xyz/hit/jee-archive.com/visitors')
+    .then(response => response.json())
     .then(data => {
       document.getElementById('visitorCount').innerText = data.value;
-});
+    })
+    .catch(error => {
+      console.error('Visitor counter error:', error);
+      document.getElementById('visitorCount').innerText = 'Error';
+    });
+
 
 
 const popup = document.getElementById("supportPopup");
