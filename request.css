@@ -26,6 +26,14 @@
     resize: none;
 }
 
+body.light-mode .request-form input, body.light-mode .request-form textarea, body.light-mode .request-form button{
+    background-color: #e0e0e0;
+}
+
+body.light-mode button{
+    color: var(--body-bg-color-dark)
+}
+
 .request-form button{
     font-weight: bold;
     letter-spacing: .8px;
