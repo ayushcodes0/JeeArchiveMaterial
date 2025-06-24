@@ -30,3 +30,10 @@ fa_close.addEventListener("click", function(){
     fa_bars.style.display = "block";
     fa_close.style.display = "none";
 })
+
+
+fetch('https://api.countapi.xyz/update/jee-archive.com/visitor/?amount=1')
+    .then(res => res.json())
+    .then(data => {
+      document.getElementById('visitorCount').innerText = data.value;
+    });
