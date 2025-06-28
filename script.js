@@ -13,37 +13,18 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const fa_bars = document.getElementById('fa-bars');
-const fa_close = document.getElementById('fa-close');
-const mobile_menu = document.getElementById('mobile-menu');
-
-let toggle_menu = false;
-
-fa_bars.addEventListener("click", function(){
-    mobile_menu.style.display = "block";
-    fa_bars.style.display = "none";
-    fa_close.style.display = "block";
-})
-
-fa_close.addEventListener("click", function(){
-    mobile_menu.style.display = "none";
-    fa_bars.style.display = "block";
-    fa_close.style.display = "none";
-})
-
-
-
-const popup = document.getElementById("supportPopup");
+  const popup = document.getElementById("supportPopup");
   const closeBtn = document.getElementById("closePopup");
-  const supportButtons = document.querySelectorAll("button, a");
+  
+  // Correct selector with . for class
+  const supportButtons = document.querySelectorAll(".support-btn");
 
+  // Simplified - no need for text check since we have the class
   supportButtons.forEach((btn) => {
-    if (btn.textContent.trim().toLowerCase() === "support") {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        popup.style.display = "flex";
-      });
-    }
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      popup.style.display = "flex";
+    });
   });
 
   closeBtn.addEventListener("click", () => {
@@ -58,9 +39,17 @@ const popup = document.getElementById("supportPopup");
     }
   });
 
-  function copyUPI() {
+  // Make function available globally
+  window.copyUPI = function() {
     const upi = "9415423928@axl";
     navigator.clipboard.writeText(upi).then(() => {
       document.getElementById("copyMsg").innerText = "UPI ID copied!";
+      // Clear message after 3 seconds
+      setTimeout(() => {
+        document.getElementById("copyMsg").innerText = "";
+      }, 3000);
+    }).catch(err => {
+      console.error('Failed to copy:', err);
+      document.getElementById("copyMsg").innerText = "Failed to copy!";
     });
-  }
+  };
