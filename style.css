@@ -584,3 +584,7 @@ body.light-mode .mobile-menu{
         right: 10px;
     }
   }
+
+  .top-link span{
+    font-weight: bold;
+  }
