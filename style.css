@@ -588,3 +588,8 @@ body.light-mode .mobile-menu{
   .top-link span{
     font-weight: bold;
   }
+
+  .coming-soon a{
+    color: #F57D00;
+    cursor: pointer;
+  }
