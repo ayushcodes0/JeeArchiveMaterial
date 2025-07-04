@@ -592,4 +592,5 @@ body.light-mode .mobile-menu{
   .coming-soon a{
     color: #F57D00;
     cursor: pointer;
+    text-decoration: underline;
   }
