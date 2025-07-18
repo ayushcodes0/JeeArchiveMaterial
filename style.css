@@ -526,9 +526,13 @@ body.light-mode .mobile-menu{
   }
 
   .coming-soon a{
-    color: #F57D00;
+    color: #DD209A;
     cursor: pointer;
-    text-decoration: underline;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
   }
 
 
