@@ -6,8 +6,7 @@
     <title>JEE Archive</title>
     <link rel="stylesheet" href="style.css" />
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
-      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
     </style>
     <link rel="icon" href="assets/Jeearchive.jpg" type="image/x-icon" />
 
@@ -15,7 +14,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <!-- Google tag (gtag.js) -->
+   
     <script
       async
       src="https://www.googletagmanager.com/gtag/js?id=G-G0SQ5ZTZ6H"
@@ -43,24 +42,50 @@
       <i class="fas fa-sun"></i>
     </button>
     <nav>
-      <a href="index.html"
-        ><img src="assets/jeelogo.png" alt="" width="80"
-      /></a>
+      <a href="index.html" class="logo-container"><img src="assets/jeelogo.png" alt="JEE Archive Logo" width="80" /></a>
       <div class="menu">
         <ul id="menu">
-          <li><a href="index.html">home</a></li>
-          <li><a href="request.html">request</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="request.html">Request</a></li>
         </ul>
       </div>
-      <!-- <i id="fa-bars" class="fa-solid fa-bars"></i>
-      <i id="fa-close" class="fa-solid fa-close"></i>
-      <div id="mobile-menu" class="mobile-menu">
-        <ul id="menu">
-          <li><a href="index.html">home</a></li>
-          <li><a href="request.html">request</a></li> 
-        </ul>
-      </div> -->
+      
+      <!- timer ->
+      <div class="nav-timer-container">
+        <div class="nav-timer mains">
+          <div class="nav-timer-label"><span>JEE Mains:</span></div>
+          <div class="nav-timer-digits">
+            <div class="nav-timer-unit" id="nav-mains-days">--<span>d</span></div>
+            <div class="nav-timer-unit" id="nav-mains-hours">--<span>h</span></div>
+            <div class="nav-timer-unit" id="nav-mains-minutes">--<span>m</span></div>
+          </div>
+        </div>
+        
+        <div class="nav-timer advanced">
+          <div class="nav-timer-label"><span>Advanced:</span></div>
+          <div class="nav-timer-digits">
+            <div class="nav-timer-unit" id="nav-advanced-days">--<span>d</span></div>
+            <div class="nav-timer-unit" id="nav-advanced-hours">--<span>h</span></div>
+            <div class="nav-timer-unit" id="nav-advanced-minutes">--<span>m</span></div>
+          </div>
+        </div>
+      </div>
+      
+      <i id="fa-bars" class="fa-solid fa-bars"></i>
+      <i id="fa-close" class="fa-solid fa-xmark"></i>
     </nav>
+    
+    <div id="mobile-menu" class="mobile-menu">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="request.html">Request</a></li>
+        <li><a href="physics.html">Physics</a></li>
+        <li><a href="chemistry.html">Chemistry</a></li>
+        <li><a href="mathematics.html">Mathematics</a></li>
+        <li><a href="material.html">Coaching Material</a></li>
+      </ul>
+    </div>
+    
     <main>
       <div class="main-div">
         <div class="left">
@@ -84,55 +109,157 @@
             </p>
             <p>
               Designed with the serious aspirant in mind, JeeArchive is more
-              than just a resource hub, it’s your preparation partner. Stay
+              than just a resource hub, it's your preparation partner. Stay
               focused with organized content, access trusted materials
-              instantly, and make your JEE journey smarter and smoother. Let’s
+              instantly, and make your JEE journey smarter and smoother. Let's
               crack JEE, the efficient way..
             </p>
           </div>
-          <h2>All Jee Material At One Place</h2>
+          
+          <!- Add JEE Countdown ->
+          <div class="countdown-container">
+            <div class="countdown-header">
+              <h3>JEE Countdown</h3>
+              <div class="countdown-tabs">
+                <div class="countdown-tab active" data-target="jee-mains">JEE Mains</div>
+                <div class="countdown-tab" data-target="jee-advanced">JEE Advanced</div>
+              </div>
+            </div>
+            
+            <div class="countdown-timers">
+              <div class="countdown-timer active" id="jee-mains-timer">
+                <div class="timer-header">
+                  <div class="timer-title">JEE Mains 2026</div>
+                  <div class="timer-date">January 2026</div>
+                </div>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <div class="timer-number" id="mains-days">--</div>
+                    <div class="timer-label">Days</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="mains-hours">--</div>
+                    <div class="timer-label">Hours</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="mains-minutes">--</div>
+                    <div class="timer-label">Minutes</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="mains-seconds">--</div>
+                    <div class="timer-label">Seconds</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div class="countdown-timer jee-advanced" id="jee-advanced-timer">
+                <div class="timer-header">
+                  <div class="timer-title">JEE Advanced 2026</div>
+                  <div class="timer-date">May 2026</div>
+                </div>
+                <div class="timer-blocks">
+                  <div class="timer-block">
+                    <div class="timer-number" id="advanced-days">--</div>
+                    <div class="timer-label">Days</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="advanced-hours">--</div>
+                    <div class="timer-label">Hours</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="advanced-minutes">--</div>
+                    <div class="timer-label">Minutes</div>
+                  </div>
+                  <div class="timer-block">
+                    <div class="timer-number" id="advanced-seconds">--</div>
+                    <div class="timer-label">Seconds</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h2>Key Subject Areas</h2>
+          
+          
+          <div class="category-grid">
+            <div class="subject-showcase">
+              <div class="subject-content">
+                <h3>Physics</h3>
+                <p>Comprehensive collection of <span class="highlight">foundational to advanced</span> physics resources including HC Verma, DC Pandey, and Irodov — meticulously curated for JEE aspirants seeking conceptual mastery.</p>
+                <a href="physics.html" class="explore-link">Explore Resources <i class="fas fa-arrow-right"></i></a>
+                <div class="subject-icon">
+                  <i class="fas fa-atom"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="subject-showcase">
+              <div class="subject-content">
+                <h3>Mathematics</h3>
+                <p>Master mathematical concepts with <span class="highlight">precision and clarity</span> through our collection of Cengage, RD Sharma, and other renowned resources designed for strategic problem-solving.</p>
+                <a href="mathematics.html" class="explore-link">Explore Resources <i class="fas fa-arrow-right"></i></a>
+                <div class="subject-icon">
+                  <i class="fas fa-square-root-alt"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="subject-showcase">
+              <div class="subject-content">
+                <h3>Chemistry</h3>
+                <p>Elevate your chemistry preparation with <span class="highlight">comprehensive resources</span> spanning organic, inorganic, and physical chemistry — from MS Chauhan to OP Tandon, all strategically organized.</p>
+                <a href="chemistry.html" class="explore-link">Explore Resources <i class="fas fa-arrow-right"></i></a>
+                <div class="subject-icon">
+                  <i class="fas fa-flask"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <h2>Featured Resources</h2>
+          
           <div class="main-links">
             <div class="links-content">
               <div class="links-info">
-                <a href="physics.html"
-                  ><h3>All Physics Books in One Place</h3></a
-                >
-                <p>
-                  Find all important Physics books for JEE preparation compiled
-                  in one convenient location.
-                </p>
+                <a href="physics.html"><h3>All Physics Books in One Place</h3></a>
+                <p>A meticulously curated collection of essential physics resources, from foundational mechanics to advanced electrodynamics, organized to optimize your JEE preparation journey.</p>
+                <div class="resource-meta">
+                  <span><i class="fas fa-book"></i> 15+ Books</span>
+                  <span><i class="fas fa-star"></i> Highly Recommended</span>
+                </div>
               </div>
               <div class="dates">
                 <p>May 8, 2025</p>
               </div>
             </div>
           </div>
+          
           <div class="main-links">
             <div class="links-content">
               <div class="links-info">
-                <a href="mathematics.html"
-                  ><h3>All Mathematics Books in One Place</h3></a
-                >
-                <p>
-                  Access a wide range of Mathematics books required for
-                  effective JEE preparation.
-                </p>
+                <a href="mathematics.html"><h3>All Mathematics Books in One Place</h3></a>
+                <p>Access a comprehensive suite of mathematics resources strategically organized by topics, featuring renowned authors and systematic approaches to problem-solving techniques.</p>
+                <div class="resource-meta">
+                  <span><i class="fas fa-book"></i> 12+ Books</span>
+                  <span><i class="fas fa-graduation-cap"></i> Topic-wise</span>
+                </div>
               </div>
               <div class="dates">
                 <p>June 3, 2025</p>
               </div>
             </div>
           </div>
+          
           <div class="main-links">
             <div class="links-content">
               <div class="links-info">
-                <a href="chemistry.html"
-                  ><h3>All Chemistry Books in One Place</h3></a
-                >
-                <p>
-                  Browse through essential Chemistry books for both Organic,
-                  Inorganic, and Physical sections.
-                </p>
+                <a href="chemistry.html"><h3>All Chemistry Books in One Place</h3></a>
+                <p>Discover essential chemistry resources covering organic, inorganic, and physical chemistry domains, featuring strategic approaches to reactions, mechanisms, and problem-solving.</p>
+                <div class="resource-meta">
+                  <span><i class="fas fa-book"></i> 14+ Books</span>
+                  <span><i class="fas fa-flask"></i> All Branches</span>
+                </div>
               </div>
               <div class="dates">
                 <p>May 21, 2025</p>
@@ -338,6 +465,11 @@
         <button onclick="copyUPI()" class="copy-btn">Copy UPI ID</button>
         <p id="copyMsg" class="copy-msg"></p>
       </div>
+    </div>
+
+   
+    <div class="floating-action-btn" id="backToTop">
+      <i class="fas fa-arrow-up"></i>
     </div>
 
     <script src="script.js"></script>
