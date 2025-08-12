@@ -529,7 +529,7 @@ body.light-mode .mobile-menu{
   .coming-soon a{
     color: #DD209A;
     cursor: pointer;
-    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    background: linear-gradient(to right, #A50933, #F57D00);
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
