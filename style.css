@@ -513,6 +513,7 @@ body.light-mode .mobile-menu{
     padding: 8px 18px;
     border-radius: 6px;
     text-align: center;
+    font-size: 14px;
   }
   @media (max-width: 560px) {
     .coming-soon{
@@ -532,6 +533,11 @@ body.light-mode .mobile-menu{
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    font-weight: bold;
+  }
+
+  .coming-soon span{
+    text-decoration: underline;
     font-weight: bold;
   }
 
