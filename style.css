@@ -513,7 +513,7 @@ body.light-mode .mobile-menu{
     padding: 8px 18px;
     border-radius: 6px;
     text-align: center;
-    font-size: 12px;
+    font-size: 13px;
   }
   @media (max-width: 560px) {
     .coming-soon{
