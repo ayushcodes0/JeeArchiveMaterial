@@ -525,15 +525,35 @@ body.light-mode .mobile-menu{
     font-weight: bold;
   }
 
-  .coming-soon a{
-    color: #DD209A;
-    cursor: pointer;
-    background: linear-gradient(to right, #A50933, #F57D00);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    font-weight: bold;
+/* --- Add this new animation rule at the end of your CSS file --- */
+@keyframes tap-effect {
+  0% {
+    transform: scale(1);
   }
+  50% {
+    transform: scale(0.92); /* A gentler scale-down for the "tap" */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --- Modify your existing .coming-soon a rule --- */
+.coming-soon a {
+  color: #DD209A;
+  cursor: pointer;
+  background: linear-gradient(to right, #A50933, #F57D00);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-weight: bold;
+
+  /* --- Add/Update these two lines for the new tap animation --- */
+  display: inline-block; /* Allows transform to work correctly on the link */
+  animation: tap-effect 1.5s infinite ease-in-out; /* Apply the new tap animation */
+}
+
+
 
   .coming-soon span{
     text-decoration: underline;
