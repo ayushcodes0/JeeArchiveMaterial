@@ -176,6 +176,7 @@ main .right{
 .right h1{
     font-size: 48px;
     font-weight: 450;
+    line-height: 1;
 }
 
 .right .top-link{
