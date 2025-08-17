@@ -3,21 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JEE Archive</title>
+    
+    <!-- Primary Meta Tags -->
+    <title>Request Study Material | JEE Archive</title>
+    <meta name="description" content="Can't find a specific JEE book, notes, or coaching material? Use our request form to let us know, and we'll do our best to add it to the JEE Archive.">
+    <meta name="keywords" content="request jee book, jee material request, find study material, jee archive request, request notes">
+    
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://jeearchive.vercel.app/request.html">
+    <meta property="og:title" content="Request JEE Study Material | JEE Archive">
+    <meta property="og:description" content="Can't find a book or study material? Send us a request, and we'll do our best to add it to the archive.">
+    <meta property="og:image" content="https://jeearchive.vercel.app/assets/jeelogo.webp">
+    
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://jeearchive.vercel.app/request.html">
+    <meta property="twitter:title" content="Request JEE Study Material | JEE Archive">
+    <meta property="twitter:description" content="Can't find a book or study material? Send us a request, and we'll do our best to add it to the archive.">
+    <meta property="twitter:image" content="https://jeearchive.vercel.app/assets/jeelogo.webp">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://jeearchive.vercel.app/request.html">
+    
+    <!-- Favicon + Stylesheets -->
+    <link rel="icon" href="assets/Jeearchive.jpg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="request.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
-    </style>
-    <link rel="icon" href="assets/Jeearchive.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-G0SQ5ZTZ6H"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-G0SQ5ZTZ6H');
+    </script>
+    
+    <!-- Schema.org markup for Breadcrumbs -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://jeearchive.vercel.app/index.html"
+      },{
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Request Material"
+      }]
+    }
     </script>
 </head>
 <body>
@@ -26,47 +68,40 @@
         <i class="fas fa-sun"></i>
     </button>
     <nav>
-        <a href="index.html"><img src="assets/jeelogo.png" alt="" width="80"></a>
+        <a href="index.html"><img src="assets/jeelogo.webp" alt="JEE Archive Logo" width="80"></a>
         <div class="menu">
             <ul id="menu">
                 <li><a href="index.html">home</a></li>
                 <li><a href="request.html">request</a></li>
             </ul>
         </div>
-        <!-- <i id="fa-bars" class="fa-solid fa-bars"></i>
-        <i id="fa-close" class="fa-solid fa-close"></i>
-        <div id="mobile-menu" class="mobile-menu">
-            <ul id="menu">
-                <li><a href="index.html">home</a></li>
-                <li><a href="request.html">request</a></li>
-            </ul>
-        </div> -->
     </nav>
     <main>
         <div class="main-div">
             <div class="left">
                 <ul>
                     <li>Authors</li>
-                    <a href="https://github.com/ayushcodes0" target="_blank"><li class="authors">Ayush</li></a>
-                    <a href="https://github.com/uttkarshcodes" target="_blank"><li class="authors">Utkarsh</li></a>
+                    <a href="https://github.com/ayushcodes0" target="_blank" rel="noopener noreferrer"><li class="authors">Ayush</li></a>
+                    <a href="https://github.com/uttkarshcodes" target="_blank" rel="noopener noreferrer"><li class="authors">Utkarsh</li></a>
                 </ul>
             </div>
             <div class="right">
-                <h2>Can't Find a Book? Request It Here</h2>
+                <h1>Request a Book or Study Material</h1>
+                <p class="intro-text">Our goal is to be the most complete resource for JEE aspirants. If you're looking for a specific book, notes, or coaching material that you can't find on our site, please let us know using the form below. We'll do our best to add it to the archive.</p>
                 <form action="https://usebasin.com/f/dbf0dda50884" method="POST" class="request-form">
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="message" placeholder="Book/Module/Material Name" rows="4" required></textarea>
+                    <label for="email" class="form-label">Your Email</label>
+                    <input id="email" type="email" name="email" placeholder="Your email address (optional)" >
+                    <label for="message" class="form-label">Book/Module/Material Name</label>
+                    <textarea id="message" name="message" placeholder="Please be as specific as possible (e.g., 'Cengage Physics Mechanics Part 1')" rows="4" required></textarea>
                     <input type="hidden" name="_redirect" value="https://jeearchive.vercel.app/thankyou.html">
-                    <button type="submit">Request</button>
+                    <button type="submit">Submit Request</button>
                 </form>
-
-
             </div>
         </div>
         <div class="bottom-box">
             <div class="box-left">
                 <h2>Have Questions? We’re Just a Click Away</h2>
-                <p>Get organized access to previous year JEE papers, chapter-wise questions, and topic-based practice material—all in one place. Perfect for serious aspirants preparing smartly.</p>
+                <p>Get organized access to previous year JEE papers, chapter-wise questions, and topic-based practice material—all in one place.</p>
             </div>
             <div class="box-right">
                 <div class="box-right-first">
@@ -75,16 +110,15 @@
                 </div>
                 <div class="box-right-sec">
                     <p>Love what we’re building? Help us grow and keep the archive free for everyone.</p>
-                    <button>Support</button>
+                    <button class="support-btn">Support</button>
                 </div>
             </div>
         </div>
         <div class="footer">
             <div class="footer-left">
-                <a href="index.html"><img src="assets/jeelogo.png" alt="" width="80"></a>
+                <a href="index.html"><img src="assets/jeelogo.webp" alt="JEE Archive Footer Logo" width="80"></a>
                 <p class="rights">&copy; All Rights Reserved 2025.</p>
                 <p class="rights">contactjeearchive@gmail.com</p>
-
             </div>
             <div class="footer-right">
                 <div class="footer-grid">
@@ -113,13 +147,13 @@
                     <div>
                         <h4>Contribute</h4>
                         <a href="request.html"><p>Request</p></a>
-                        <a href="#"><p>Support</p></a>
+                        <a href="#" class="support-btn"><p>Support</p></a>
                     </div>
                     <div>
                         <h4>Quick Links</h4>
-                        <a href="https://www.linkedin.com/in/ayushsinghiiit/"><p>Linkedin</p></a>
-                        <a href="https://x.com/ayushcodes_"><p>Twitter</p></a>
-                        <a href="https://github.com/ayushcodes0"><p>Github</p></a>
+                        <a href="https://www.linkedin.com/in/ayushsinghiiit/" target="_blank" rel="noopener noreferrer"><p>Linkedin</p></a>
+                        <a href="https://x.com/ayushcodes_" target="_blank" rel="noopener noreferrer"><p>Twitter</p></a>
+                        <a href="https://github.com/ayushcodes0" target="_blank" rel="noopener noreferrer"><p>Github</p></a>
                     </div>
                 </div>
             </div>
@@ -130,12 +164,12 @@
         <span class="close-btn" id="closePopup">&times;</span>
         <h2>Support Us via UPI</h2>
         <p>Scan this QR or use the UPI ID below:</p>
-        <img src="assets/Ayush-QR.jpg" alt="UPI QR Code" class="qr-image" />
+        <img src="assets/Ayush-QR.webp" alt="UPI QR Code for Support" class="qr-image" />
         <p class="upi-id"><strong></strong></p>
         <button onclick="copyUPI()" class="copy-btn">Copy UPI ID</button>
         <p id="copyMsg" class="copy-msg"></p>
       </div>
     </div>
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
