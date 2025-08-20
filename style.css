@@ -592,6 +592,15 @@ body.light-mode .mobile-menu{
     font-size: 24px;
     cursor: pointer;
     color: #666;
+    padding: 2px;
+    border-radius: 50%;
+    height: 24px;
+    width: 24px;
+    display: flex
+;
+    align-items: center;
+    justify-content: center;
+    border: none;
   }
 
   .qr-image {
