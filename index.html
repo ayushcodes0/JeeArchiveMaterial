@@ -76,10 +76,11 @@
       <a href="/request.html">Request</a> window open till <span>20th August</span>, so send yours now to get it included.
     </div>
 
-    <button class="theme-toggle" id="themeToggle">
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
       <i class="fas fa-moon"></i>
       <i class="fas fa-sun"></i>
     </button>
+
     <nav>
       <a href="index.html">
         <img src="assets/jeelogo.webp" width="80" alt="JEE Archive Logo"/>
@@ -300,14 +301,15 @@
               Looking for a specific paper or topic set? Let us know, and we’ll
               add it to the archive.
             </p>
-            <a href="request.html"><button>Request</button></a>
+            <a href="request.html" class="button-link" aria-label="Request new study materials">Request</a>
           </div>
           <div class="box-right-sec">
             <p>
               Love what we’re building? Help us grow and keep the archive free
               for everyone.
             </p>
-            <button class="support-btn">Support</button>
+            <button class="support-btn" aria-label="Support JEE Archive with donation">Support</button>
+
           </div>
         </div>
       </div>
@@ -360,12 +362,12 @@
     </main>
     <div id="supportPopup" class="popup-overlay">
       <div class="popup-content">
-        <span class="close-btn" id="closePopup">&times;</span>
+        <button class="close-btn" id="closePopup" aria-label="Close support popup">&times;</button>
         <h2>Support Us via UPI</h2>
         <p>Scan this QR or use the UPI ID below:</p>
         <img src="assets/Ayush-QR.webp" alt="UPI QR Code" class="qr-image" />
         <p class="upi-id"><strong></strong></p>
-        <button onclick="copyUPI()" class="copy-btn">Copy UPI ID</button>
+        <button onclick="copyUPI()" class="copy-btn" aria-label="Copy UPI ID to clipboard">Copy UPI ID</button>
         <p id="copyMsg" class="copy-msg"></p>
       </div>
     </div>
