@@ -627,3 +627,168 @@ body.light-mode .mobile-menu{
   .authors{
     text-decoration: underline;
   }
+
+
+
+  .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+      
+      /* Support Popup Styles */
+      .support-popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+      
+      .support-popup-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .support-popup-content {
+        background-color: white;
+        padding: 30px;
+        border-radius: 12px;
+        max-width: 500px;
+        width: 90%;
+        text-align: center;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      }
+      
+      .support-popup-content h2 {
+        margin-top: 0;
+        color: #2c3e50;
+        font-size: 24px;
+      }
+      
+      .support-popup-content p {
+        margin-bottom: 20px;
+        color: #555;
+        line-height: 1.6;
+      }
+      
+      .support-popup-close {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #777;
+      }
+      
+      .support-popup-close:hover {
+        color: #333;
+      }
+      
+      .support-qr-image {
+        max-width: 200px;
+        margin: 15px auto;
+        border: 1px solid #eee;
+        border-radius: 8px;
+      }
+      
+      .support-upi-id {
+        font-weight: bold;
+        font-size: 18px;
+        margin: 15px 0;
+        color: #2c3e50;
+        word-break: break-all;
+      }
+      
+      .support-copy-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        margin-top: 10px;
+        transition: background-color 0.3s;
+      }
+      
+      .support-copy-btn:hover {
+        background-color: #3e8e41;
+      }
+      
+      .support-copy-msg {
+        margin-top: 10px;
+        color: #4CAF50;
+        font-weight: bold;
+        height: 20px;
+      }
+      
+      .support-actions {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+      
+      .support-btn-primary {
+        background-color: #3498db;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        font-weight: bold;
+        transition: background-color 0.3s;
+      }
+      
+      .support-btn-primary:hover {
+        background-color: #2980b9;
+      }
+      
+      .support-btn-secondary {
+        background-color: #e7e7e7;
+        color: #333;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      }
+      
+      .support-btn-secondary:hover {
+        background-color: #ddd;
+      }
+      
+      @media (max-width: 600px) {
+        .support-popup-content {
+          padding: 20px;
+          width: 85%;
+        }
+        
+        .support-popup-content h2 {
+          font-size: 20px;
+        }
+        
+        .support-actions {
+          flex-direction: column;
+        }
+      }
