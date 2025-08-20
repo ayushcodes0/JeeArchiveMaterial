@@ -540,7 +540,7 @@ body.light-mode .mobile-menu{
 }
 
 /* --- Modify your existing .coming-soon a rule --- */
-.coming-soon a {
+.coming-soon span {
   color: #DD209A;
   cursor: pointer;
   background: linear-gradient(to right, #A50933, #F57D00);
