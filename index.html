@@ -18,7 +18,7 @@
     <meta property="og:image" content="https://jeearchive.vercel.app/assets/jeelogo.webp">
     
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:card" content="summary\_large\_image">
     <meta property="twitter:url" content="https://jeearchive.vercel.app/">
     <meta property="twitter:title" content="JEE Archive - Complete JEE Preparation Resources">
     <meta property="twitter:description" content="Free JEE preparation resources - Previous year papers, coaching materials, NCERT books, test series, and study notes for Physics, Chemistry & Mathematics.">
@@ -50,6 +50,7 @@
       }
       gtag("js", new Date());
 
+
       gtag("config", "G-G0SQ5ZTZ6H");
     </script>
     <!-- Schema.org markup for Google -->
@@ -69,18 +70,32 @@
     </script>
     
     <link rel="stylesheet" href="style.css" />
+    <style>
+      .sr-only {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0,0,0,0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+      }
+    </style>
   </head>
   <body>
     <div class="coming-soon">
-      Big update coming — we’re adding almost every book you’ve asked for!  
+      Big update coming — we're adding almost every book you've asked for!  
       <a href="/request.html">Request</a> window open till <span>20th August</span>, so send yours now to get it included.
     </div>
 
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
-      <i class="fas fa-moon"></i>
-      <i class="fas fa-sun"></i>
-    </button>
 
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light theme">
+      <i class="fas fa-moon" aria-hidden="true"></i>
+      <i class="fas fa-sun" aria-hidden="true"></i>
+      <span class="sr-only">Toggle theme</span>
+    </button>
     <nav>
       <a href="index.html">
         <img src="assets/jeelogo.webp" width="80" alt="JEE Archive Logo"/>
@@ -97,12 +112,16 @@
         <div class="left">
           <ul>
             <li>Authors</li>
-            <a href="https://github.com/ayushcodes0" target="_blank" rel="noopener noreferrer"><li class="authors">Ayush</li></a>
-            <a href="https://github.com/uttkarshcodes" target="_blank" rel="noopener noreferrer"><li class="authors">Utkarsh</li></a>
+            <li>
+              <a href="https://github.com/ayushcodes0" target="\_blank" rel="noopener noreferrer" class="authors">Ayush</a>
+            </li>
+            <li>
+              <a href="https://github.com/uttkarshcodes" target="\_blank" rel="noopener noreferrer" class="authors">Utkarsh</a>
+            </li>
           </ul>
         </div>
         <div class="right">
-          <a href="https://lookerstudio.google.com/reporting/79e86a0b-5b6e-4751-a91e-881b50b646c9" target="_blank" rel="noopener noreferrer"><p class="top-link">Trusted by <span>8000+ aspirants.</span> </p></a>
+          <a href="https://lookerstudio.google.com/reporting/79e86a0b-5b6e-4751-a91e-881b50b646c9" target="\_blank" rel="noopener noreferrer"><p class="top-link">Trusted by <span>8000+ aspirants.</span> </p></a>
           <h1 class="heading">JEE Archive</h1>
           <div class="info">
             <p>
@@ -113,11 +132,12 @@
               Everything you need is right here.
             </p>
 
+
             <p>
               Designed with the serious aspirant in mind, JeeArchive is more
-              than just a resource hub, it’s your preparation partner. Stay
+              than just a resource hub, it's your preparation partner. Stay
               focused with organized content, access trusted materials
-              instantly, and make your JEE journey smarter and smoother. Let’s
+              instantly, and make your JEE journey smarter and smoother. Let's
               crack JEE, the efficient way.
             </p>
           </div>
@@ -288,7 +308,7 @@
       </div>
       <div class="bottom-box">
         <div class="box-left">
-          <h2>Have Questions? We’re Just a Click Away</h2>
+          <h2>Have Questions? We're Just a Click Away</h2>
           <p>
             Get organized access to previous year JEE papers, chapter-wise
             questions, and topic-based practice material—all in one place.
@@ -298,18 +318,17 @@
         <div class="box-right">
           <div class="box-right-first">
             <p>
-              Looking for a specific paper or topic set? Let us know, and we’ll
+              Looking for a specific paper or topic set? Let us know, and we'll
               add it to the archive.
             </p>
-            <a href="request.html" class="button-link" aria-label="Request new study materials">Request</a>
+            <a href="request.html"><button aria-label="Request new study materials">Request</button></a>
           </div>
           <div class="box-right-sec">
             <p>
-              Love what we’re building? Help us grow and keep the archive free
+              Love what we're building? Help us grow and keep the archive free
               for everyone.
             </p>
             <button class="support-btn" aria-label="Support JEE Archive with donation">Support</button>
-
           </div>
         </div>
       </div>
@@ -341,19 +360,19 @@
             </div>
             <div>
                 <h4>Popular</h4>
-                <a href="https://drive.google.com/file/d/1uj4qkOl_NXhkkruxsjFHtyMJTJhhMjq5/view"><p>N Avashthi</p></a>
+                <a href="https://drive.google.com/file/d/1uj4qkOl\_NXhkkruxsjFHtyMJTJhhMjq5/view"><p>N Avashthi</p></a>
                 <a href="https://drive.google.com/file/d/1QzXTMMywltm8dJzHRYUUngjZBVSIz2bU/view"><p>A Das Gupta</p></a>
                 <a href="physics/am.html"><p>Anurag Mishra</p></a>
             </div>
             <div>
                 <h4>Contribute</h4>
                 <a href="request.html"><p>Request</p></a>
-                <a class="support-btn" href=""><p>Support</p></a>
+                <a class="support-btn" href="" aria-label="Support JEE Archive with donation"><p>Support</p></a>
             </div>
             <div>
                 <h4>Quick Links</h4>
                 <a href="https://www.linkedin.com/in/ayushsinghiiit/"><p>Linkedin</p></a>
-                <a href="https://x.com/ayushcodes_"><p>Twitter</p></a>
+                <a href="https://x.com/ayushcodes\_"><p>Twitter</p></a>
                 <a href="https://github.com/ayushcodes0"><p>Github</p></a>
             </div>
             </div>
@@ -371,6 +390,7 @@
         <p id="copyMsg" class="copy-msg"></p>
       </div>
     </div>
+
 
     <script src="script.js"></script>
   </body>
