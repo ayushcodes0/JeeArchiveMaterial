@@ -515,6 +515,13 @@ body.light-mode .mobile-menu{
     border-radius: 6px;
     text-align: center;
   }
+
+  .coming-soon a{
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+
   @media (max-width: 560px) {
     .coming-soon{
         left: 10px;
