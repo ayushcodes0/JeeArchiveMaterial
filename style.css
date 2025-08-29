@@ -558,7 +558,7 @@ body.light-mode .mobile-menu{
 
   /* --- Add/Update these two lines for the new tap animation --- */
   display: inline-block; /* Allows transform to work correctly on the link */
-  animation: tap-effect 1.5s infinite ease-in-out; /* Apply the new tap animation */
+  /* animation: tap-effect 1.5s infinite ease-in-out; Apply the new tap animation */
 }
 
 
