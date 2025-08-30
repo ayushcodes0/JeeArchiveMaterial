@@ -643,3 +643,50 @@ body.light-mode .mobile-menu{
   .authors{
     text-decoration: underline;
   }
+
+  /* --- Styling for Top Stats and Donations --- */
+/* --- Styling for Top Stats and Donations --- */
+
+.top-stats {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.top-link {
+  margin: 0;
+}
+
+.donations {
+  font-size: 0.9em;
+  border-radius: 5px;
+  color: #B0B5B2;
+  /* color: #686B6A; Text color for light mode */
+}
+
+.donations p {
+  margin: 0;
+}
+
+.donations span {
+  font-weight: 600;
+  color: #B0B5B2;
+}
+
+/* --- Dark Mode Styles --- */
+
+body.light-mode .donations {
+  color: #686B6A; /* Text color for dark mode */
+}
+
+body.light-mode .donations span {
+  color: #686B6A; /* Span color in dark mode for contrast and emphasis */
+}
+
+@media(max-width: 500px){
+    .top-stats{
+        gap: 10px;
+    }
+}

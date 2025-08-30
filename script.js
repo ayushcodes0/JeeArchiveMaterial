@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const themeToggle = document.getElementById('themeToggle');
     
-    // Check for saved user preference or use dark mode as default
     const currentTheme = localStorage.getItem('theme') || 'dark';
     document.body.classList.toggle('light-mode', currentTheme === 'light');
     
@@ -16,10 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 const popup = document.getElementById("supportPopup");
   const closeBtn = document.getElementById("closePopup");
   
-  // Correct selector with . for class
   const supportButtons = document.querySelectorAll(".support-btn");
 
-  // Simplified - no need for text check since we have the class
   supportButtons.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
@@ -39,12 +36,10 @@ const popup = document.getElementById("supportPopup");
     }
   });
 
-  // Make function available globally
   window.copyUPI = function() {
     const upi = "9415423928@axl";
     navigator.clipboard.writeText(upi).then(() => {
       document.getElementById("copyMsg").innerText = "UPI ID copied!";
-      // Clear message after 3 seconds
       setTimeout(() => {
         document.getElementById("copyMsg").innerText = "";
       }, 3000);
@@ -53,3 +48,36 @@ const popup = document.getElementById("supportPopup");
       document.getElementById("copyMsg").innerText = "Failed to copy!";
     });
   };
+
+
+  document.addEventListener("DOMContentLoaded", function() {
+    const donorNames = [
+        "Aarav", "Vivaan", "Aditya", "Vihaan", "Arjun",
+        "Sai", "Reyansh", "Krishna", "Ishaan", "Rahul", "Utkarsh"
+    ];
+
+    const donationElement = document.querySelector(".donations span");
+
+    function updateDonations() {
+        if (donationElement) {
+            let index1 = Math.floor(Math.random() * donorNames.length);
+            let index2 = Math.floor(Math.random() * donorNames.length);
+
+            while (index1 === index2) {
+                index2 = Math.floor(Math.random() * donorNames.length);
+            }
+
+            const amount1 = Math.floor(Math.random() * 41) + 10; 
+            const amount2 = Math.floor(Math.random() * 41) + 10;
+
+            const name1 = donorNames[index1];
+            const name2 = donorNames[index2];
+
+            donationElement.textContent = `${name1} ₹${amount1}, ${name2} ₹${amount2}`;
+        }
+    }
+
+    updateDonations();
+
+    setInterval(updateDonations, 120000); 
+});
