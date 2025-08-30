@@ -77,7 +77,6 @@ body.light-mode .menu ul li:hover{
 }
 
 body.light-mode .left ul,
-body.light-mode .top-link,
 body.light-mode .dates p {
     color: #686b6a;
     cursor: pointer;
@@ -180,15 +179,8 @@ main .right{
 }
 
 .right .top-link{
-    text-decoration: underline;
     color: var(--menu-content-color-dark);
     font-size: 14px;
-}
-
-.right .top-link:hover{
-    color: hsla(140, 6%, 94%, 1);
-    cursor: pointer;
-    transition: all ease .3s;
 }
 
 .right .info{
@@ -649,7 +641,8 @@ body.light-mode .mobile-menu{
 
 .top-stats {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-items: start;
   gap: 20px;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -662,17 +655,25 @@ body.light-mode .mobile-menu{
 .donations {
   font-size: 0.9em;
   border-radius: 5px;
-  color: #B0B5B2;
+  width: 100%;
+  color: #f7f7f7;  
+  background-color: hsla(140, 6%, 15%, 1);
+  padding: 8px 12px;
   /* color: #686B6A; Text color for light mode */
+}
+
+body.light-mode .donations {
+  background-color: #e0e0e0;
 }
 
 .donations p {
   margin: 0;
+  line-height: 1.4;
 }
 
 .donations span {
   font-weight: 600;
-  color: #B0B5B2;
+  color: #f7f7f7;
 }
 
 /* --- Dark Mode Styles --- */
