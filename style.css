@@ -83,8 +83,7 @@ body.light-mode .dates p {
     transition: all ease .3s;
 }
 
-body.light-mode .left ul li:hover,
-body.light-mode .top-link:hover{
+body.light-mode .left ul li:hover{
     color: black;
 }
 
@@ -669,7 +668,6 @@ body.light-mode .donations {
 .donations p {
   margin: 0;
   line-height: 1.4;
-  text-align: center;
 }
 
 .donations span {
@@ -691,4 +689,9 @@ body.light-mode .donations span {
     .top-stats{
         gap: 10px;
     }
+}
+
+
+body.light-mode .top-link{
+    color: #686B6A; 
 }
