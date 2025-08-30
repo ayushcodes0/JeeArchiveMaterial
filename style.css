@@ -657,7 +657,7 @@ body.light-mode .mobile-menu{
   width: 100%;
   color: #f7f7f7;  
   background-color: hsla(140, 6%, 15%, 1);
-  padding: 8px 12px;
+  padding: 12px 16px;
   /* color: #686B6A; Text color for light mode */
 }
 
@@ -667,7 +667,7 @@ body.light-mode .donations {
 
 .donations p {
   margin: 0;
-  line-height: 1.4;
+  line-height: 1.8;
 }
 
 .donations span {
@@ -693,4 +693,9 @@ body.light-mode .donations span {
 
 body.light-mode .top-link{
     color: #686B6A; 
+}
+
+.spt {
+    text-decoration: underline;
+    cursor: pointer;
 }
