@@ -669,6 +669,7 @@ body.light-mode .donations {
 .donations p {
   margin: 0;
   line-height: 1.4;
+  text-align: center;
 }
 
 .donations span {
